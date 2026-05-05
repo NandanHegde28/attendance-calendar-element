@@ -1,0 +1,1 @@
+export const weeks: string[] = ['MON', 'THU', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
