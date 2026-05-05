@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import "./App.css";
-import CalendarWidget from "./components/calenderWidget/calendarWidget.component";
+import CalendarWidget from "./components/calendarWidget/CalendarWidget.component.tsx";
 
 function App(): JSX.Element {
   return (
