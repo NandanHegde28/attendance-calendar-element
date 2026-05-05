@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { months } from "../../utils/months";
 import type { Props } from "../../utils/types/types";
 import style from "../dayView/DayView.module.css";
+import { weeks } from "../../utils/weeks";
 
 function DayView({ calendarState, setCalendarState }: Props) {
   const today: Date = new Date();
@@ -101,7 +102,11 @@ function DayView({ calendarState, setCalendarState }: Props) {
             </button>
           </div>
 
-          <div className={style.weekDays}></div>
+          <div className={style.weekDays}>
+            {weeks.map((week, index) => (
+              <span key={`week-${index}`}>{week}</span>
+            ))}
+          </div>
           <div className={style.monthDays}>
             {blankArray.map((_, i) => (
               <span key={`blank-${i}`} className={style.empty}></span>
